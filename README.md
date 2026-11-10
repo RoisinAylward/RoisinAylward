@@ -40,6 +40,15 @@
   * **Reporting Architecture:** Outputs structured, timestamped triage records dynamically catalogued in an analytical `archive/` database.
   * **Documentation:** Includes the full [Threat Hunter Toolkit  Report (PDF)](https://github.com/RoisinAylward/ThreatHunterToolkit/blob/main/documentation/Threat%20Hunter%20Toolkit%20Report.pdf) viewable natively in-repo.
 
+* [Secure Azure Cloud Deployment: TechStart Solutions (COMP H2703)](https://github.com/RoisinAylward/techstartsolutions) - Designed, deployed and secured the Azure infrastructure for a fictional six-person software company's web app, covering network segmentation, least-privilege access control, encryption, Linux hardening, logging and backups. Built for *Security Administration*.
+  * **Cloud Stack:** Ubuntu 24.04 VM running Apache, mod_wsgi and Flask, with Azure SQL Database, Blob Storage and Key Vault, inside one VNet split into three subnets.
+  * **Network Segmentation:** Least-privilege NSG rules (SSH from my IP only, web traffic on 80/443 only), with the database and Key Vault closed to the internet and reachable only through private endpoints.
+  * **Authentication & Access Control:** SSH key-only login with root login disabled, PAM account lockout (`pam_faillock`), password complexity, history and ageing rules, and Azure RBAC roles mapped to the Developer, QA and Project Manager teams.
+  * **Encryption:** TDE on Azure SQL, encryption at rest on Blob Storage, TLS 1.2 minimum for database connections, and HTTPS with an HTTP-to-HTTPS redirect.
+  * **Hardening & Monitoring:** UFW default-deny firewall with SSH rate limiting, Fail2ban, automatic security updates, and a Bash security monitoring script (`security_monitor.sh`).
+  * **Logging & Backups:** Persistent journald and logrotate retention policies, Azure SQL automated backups, and a nightly cron job that backs up the web server.
+  * **Documentation:** Includes the full [Project Report (PDF)](https://github.com/RoisinAylward/techstartsolutions/blob/main/documentation/SecurityAdministrationProjectReport.pdf) viewable natively in-repo.
+
 * [Modular Incident Response Triage (MIRT) Toolkit (COMP H2702)](https://github.com/RoisinAylward/MIRT) - A plugin-based, multi-language mini DFIR framework designed to automate host-based incident response triage on Windows environments. Built as a group project for *Scripting for Cyber Security*.
   * **Automation Stack:** Combines a Windows PowerShell collector core (`collector.ps1`) with a multi-threaded Python 3 analysis engine (`mirt.py`).
   * **Threat Intel & Enrichment:** Features a dynamic plugin architecture utilising the VirusTotal and AbuseIPDB APIs for automated hash reputation, IP enrichment, and suspicious persistence detection.
