@@ -45,6 +45,13 @@
   * **Threat Intel & Enrichment:** Features a dynamic plugin architecture utilising the VirusTotal and AbuseIPDB APIs for automated hash reputation, IP enrichment, and suspicious persistence detection.
   * **Detection Focus:** Targets Windows Run keys and common defence evasion techniques, such as parsing heavily obfuscated and base64-encoded PowerShell payloads.
   * **Documentation:** Includes the full [Technical Report (PDF)](https://github.com/RoisinAylward/MIRT/blob/main/documentation/Technical%20Report.pdf) natively viewable in-repo.
+ 
+* [Hospital Database (COMP H1029)](https://github.com/RoisinAylward/HospitalDatabase) - Designed and built a MySQL database for a hospital, from conceptual, logical and physical ER diagrams through to a 10-table schema in third normal form and 20 SQL tasks. Built for *Database Fundamentals*.
+  * **Design:** Entities, business rules, cardinalities and participation constraints, worked from a conceptual ERD through a logical ERD to a physical model in MySQL Workbench.
+  * **Schema:** 10 tables covering departments, treatments, staff, patients, medical history, contact details, bed allocation and appointments, with composite keys and junction tables for the many-to-many relationships.
+  * **Data:** DDL and DML scripts that create the database and fill every table with between 11 and 53 rows of sample data.
+  * **SQL:** 20 tasks using joins across up to five tables, aggregates, date arithmetic, updates, deletes that respect foreign keys, and a view that draws on three tables.
+  * **Documentation:** Includes the full [Project Report (PDF)](https://github.com/RoisinAylward/HospitalDatabase/blob/main/documentation/DBF_project_report.pdf) viewable natively in-repo.
 
 
 ### 📈 1st Year Modules:
