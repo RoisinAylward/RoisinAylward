@@ -1,7 +1,7 @@
 ## Hello World!👋
 
 ## 📖 𝙰𝚋𝚘𝚞𝚝 𝙼𝚎
-- 🌱 I’m currently in my 3rd year of studying Computer Science at TU Dublin, with a special interest in Digital Forensics & Cybersecurity
+- 🌱 I’m currently in my 3rd year of studying Computer Science at TU Dublin, with a special interest in Digital Forensics & Cyber Security
 - 🔭 I’m currently working as a tutor in a variety of computing modules for other students at TU Dublin
 - 🤔 I’m looking for a work placement as part of my university program
 - 😄 Pronouns: she/her
@@ -30,7 +30,7 @@
   * **Data Quality & Preparation:** Detected and resolved inconsistent protocol labels, logically impossible records (e.g. failed logins exceeding total attempts), 7% missing values and outliers, using distribution-aware imputation and IQR capping.
   * **Feature Engineering:** Designed three security-driven features: login failure rate (brute-force intensity), sent/received byte ratio (possible exfiltration) and retry rate (possible scanning). The byte ratio ranked as the second most important attack predictor.
   * **Modelling & Evaluation:** Compared Decision Tree and KNN classifiers for `attack_category`, and Linear Regression and Decision Tree Regressor for `avg_packet_size`, using stratified hold-out testing, 5-fold cross-validation, confusion matrices and RMSE/MAE/R².
-  * **Documentation:** Includes the full [Project Report (PDF)](Project_Report_B00168689.pdf) viewable natively in-repo.
+  * **Documentation:** Includes the full [Project Report (PDF)](https://github.com/RoisinAylward/CyberattackDetectionML/blob/main/documentation/Project_Report_B00168689.pdf) viewable natively in-repo.
 
 * [Threat Hunter Toolkit (COMP H2705)](https://github.com/RoisinAylward/ThreatHunterToolkit) - An Automated SOC Investigation Framework engineered to process high-volume security logs and automatically flag cross-platform indicators of compromise. Built for *Advanced Scripting for Cyber Security*.
   * **Automation Stack:** Native PowerShell orchestration core (`run.ps1`) driving high-throughput pattern matching and string manipulation across log files.
