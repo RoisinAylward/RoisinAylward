@@ -32,6 +32,14 @@
   * **Modelling & Evaluation:** Compared Decision Tree and KNN classifiers for `attack_category`, and Linear Regression and Decision Tree Regressor for `avg_packet_size`, using stratified hold-out testing, 5-fold cross-validation, confusion matrices and RMSE/MAE/R².
   * **Documentation:** Includes the full [Project Report (PDF)](https://github.com/RoisinAylward/CyberattackDetectionML/blob/main/documentation/Project_Report_B00168689.pdf) viewable natively in-repo.
 
+* [Secure AWS Cloud Architecture: WinLocal Giveaways (COMP H2701)](https://github.com/RoisinAylward/WinLocalCloudArchitecture) - Designed a secure, scalable AWS architecture for a fictional Dublin start-up recovering from a ransomware attack, and built a proof of concept of it in an AWS Academy Learner Lab. Built for *Security Architecture*.
+  * **Architecture:** draw.io design across two Availability Zones with public and private subnets, a bastion host, NAT gateway, Application Load Balancer, Auto Scaling, RDS MySQL and an S3 static backup website.
+  * **Network Security:** Four least-privilege security groups chained bastion to web to database, plus stateless network ACLs on every subnet. The web servers and database have no public access.
+  * **Scalability:** Auto Scaling group with a target tracking policy holding average CPU at 60%, launching from a custom AMI. A load test triggered scale-out to a second instance.
+  * **Beyond the PoC:** Justified IAM (least privilege per role and MFA) and Route 53 DNS failover to the S3 backup site, and evaluated the design against the AWS Well-Architected Sustainability Pillar.
+  * **Group Work:** NIST CSF 2.0 security posture presentation for the business owners with Sofiia Prymak and Livia Mathew, where I covered the recommended controls for all six functions.
+  * **Documentation:** Includes the full [Report (PDF)](https://github.com/RoisinAylward/WinLocalCloudArchitecture/blob/main/documentation/Report_B00168689.pdf) and [Presentation (PDF)](https://github.com/RoisinAylward/WinLocalCloudArchitecture/blob/main/documentation/AWS%20Cloud%20Infrastructure%20Deployment.pdf) viewable natively in-repo.
+
 * [Threat Hunter Toolkit (COMP H2705)](https://github.com/RoisinAylward/ThreatHunterToolkit) - An Automated SOC Investigation Framework engineered to process high-volume security logs and automatically flag cross-platform indicators of compromise. Built for *Advanced Scripting for Cyber Security*.
   * **Automation Stack:** Native PowerShell orchestration core (`run.ps1`) driving high-throughput pattern matching and string manipulation across log files.
   * **Multi-Source Log Analysis:** Ingests and correlates disparate log data streams including web server entries (`access.log`), Linux/SSH authentication attempts (`auth.log`), and native host activities (`powershell_log.txt`).
