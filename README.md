@@ -55,6 +55,13 @@
   * **Detection Focus:** Targets Windows Run keys and common defence evasion techniques, such as parsing heavily obfuscated and base64-encoded PowerShell payloads.
   * **Documentation:** Includes the full [Technical Report (PDF)](https://github.com/RoisinAylward/MIRT/blob/main/documentation/Technical%20Report.pdf) natively viewable in-repo.
  
+* [Open-Source Firewalls: OPNsense, IPCop & IPFire (CYSC H1001)](https://github.com/RoisinAylward/OpenSourceFirewalls) - Each of us set up a different open-source firewall in the same virtual testbed, attacked it from the WAN side, hardened it, and ran the same attacks again to compare all three. Built as a group project for *Network Security*.
+  * **My Part:** Configured and tested IPCop, managed from an Xubuntu VM on the internal network and attacked from a Kali Linux VM.
+  * **Testbed:** Each firewall separated a WAN with the attacker, a DMZ with a port-forwarded Apache web server, and an internal network.
+  * **Attacks:** Nmap reconnaissance scans, ICMP floods with hping3 (including random source IPs), HTTP floods with wrk, and SSH brute forcing with Hydra and the RockYou wordlist.
+  * **Hardening:** Dropped ICMP from the untrusted (red) network, moved HTTP traffic to a lower traffic-shaping priority, and closed SSH to the red network. Afterwards the wrk flood fell from 190.84MB to 2.30MB of traffic in 20 seconds, and Hydra could no longer reach SSH.
+  * **Documentation:** Includes the full [Project Report (PDF)](https://github.com/RoisinAylward/OpenSourceFirewalls/blob/main/documentation/B00168689RoisinAylwardnetsecurity.pdf) and [Presentation (PDF)](https://github.com/RoisinAylward/OpenSourceFirewalls/blob/main/documentation/Network%20Security%20Project%20Presentation.pdf) viewable natively in-repo.
+ 
 * [Hospital Database (COMP H1029)](https://github.com/RoisinAylward/HospitalDatabase) - Designed and built a MySQL database for a hospital, from conceptual, logical and physical ER diagrams through to a 10-table schema in third normal form and 20 SQL tasks. Built for *Database Fundamentals*.
   * **Design:** Entities, business rules, cardinalities and participation constraints, worked from a conceptual ERD through a logical ERD to a physical model in MySQL Workbench.
   * **Schema:** 10 tables covering departments, treatments, staff, patients, medical history, contact details, bed allocation and appointments, with composite keys and junction tables for the many-to-many relationships.
