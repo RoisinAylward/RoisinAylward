@@ -64,10 +64,11 @@
   * **Logging & Backups:** Persistent journald and logrotate retention policies, Azure SQL automated backups, and a nightly cron job that backs up the web server.
   * **Documentation:** Includes the full [Project Report (PDF)](https://github.com/RoisinAylward/techstartsolutions/blob/main/documentation/SecurityAdministrationProjectReport.pdf) viewable natively in-repo.
 
-* [Modular Incident Response Triage (MIRT) Toolkit (COMP H2702)](https://github.com/RoisinAylward/MIRT) - A plugin-based, multi-language mini DFIR framework designed to automate host-based incident response triage on Windows environments. Built as a group project for *Scripting for Cyber Security*.
-  * **Automation Stack:** Combines a Windows PowerShell collector core (`collector.ps1`) with a multi-threaded Python 3 analysis engine (`mirt.py`).
-  * **Threat Intel & Enrichment:** Features a dynamic plugin architecture utilising the VirusTotal and AbuseIPDB APIs for automated hash reputation, IP enrichment, and suspicious persistence detection.
-  * **Detection Focus:** Targets Windows Run keys and common defence evasion techniques, such as parsing heavily obfuscated and base64-encoded PowerShell payloads.
+* [Modular Incident Response Triage (MIRT) Toolkit (COMP H2702)](https://github.com/RoisinAylward/MIRT) - A plugin-based, multi-language mini DFIR framework that automates basic incident response triage on Windows. Built as a group project for *Scripting for Cyber Security*.
+  * **Automation Stack:** A PowerShell collector (`collector.ps1`) and orchestrator built by my teammate, feeding a Python 3 analysis core (`mirt.py`) that I built.
+  * **Threat Intel & Enrichment:** My plugins check file hashes against VirusTotal and public IPs against AbuseIPDB, with caching and rate limiting. A persistence plugin we designed together flags Run-key entries in user-writable paths.
+  * **Detection Focus:** Targets Windows Run-key persistence and hunts PowerShell logs for encoded commands (`-EncodedCommand`) and other suspicious keywords.
+  * **Outcome:** Tested end-to-end on a real Windows laptop: checked 5 executable hashes on VirusTotal and flagged 2 Run-key entries in AppData, with every finding in a Markdown report grouped by severity.
   * **Documentation:** Includes the full [Technical Report (PDF)](https://github.com/RoisinAylward/MIRT/blob/main/documentation/Technical%20Report.pdf) natively viewable in-repo.
  
 * [Open-Source Firewalls: OPNsense, IPCop & IPFire (CYSC H1001)](https://github.com/RoisinAylward/OpenSourceFirewalls) - Each of us set up a different open-source firewall in the same virtual testbed, attacked it from the WAN side, hardened it, and ran the same attacks again to compare all three. Built as a group project for *Network Security*.
