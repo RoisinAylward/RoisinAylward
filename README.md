@@ -1,7 +1,7 @@
 ## Hello World!👋
 
 ## 📖 𝙰𝚋𝚘𝚞𝚝 𝙼𝚎
-- 🌱 I’m currently in my 3rd year of studying Computer Science at TU Dublin, with a special interest in Digital Forensics & Cyber Security
+- 🌱 I’m currently in my 3rd year of studying Digital Forensics & Cyber Security at TU Dublin
 - 🔭 I’m currently working as a tutor in a variety of computing modules for other students at TU Dublin
 - 🤔 I’m looking for a work placement as part of my university program
 - 😄 Pronouns: she/her
