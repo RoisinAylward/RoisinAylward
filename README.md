@@ -93,11 +93,6 @@
   * **Testing Suite:** Comprehensive unit tests (`test_core_logic.py`) to automate input validity checking and ensure functional consistency.
 
 
-
-## 🛠️ Personal Side Projects 
-* [Smart Camera (WIP)](https://github.com/RoisinAylward/smartcamera) - A work in progress for a self-hosted home security setup that includes alarms, indoor & outdoor cameras, and a video and two-way intercom doorbell. All devices are hosted both locally and in the cloud, and are connected to a control centre mobile application.
-* [Minecraft Server (WIP)](https://github.com/RoisinAylward/minecraft-server) - A work in progress for an Archery-themed Minecraft Server with mods and plugins.
-
 <!--
 **RoisinAylward/RoisinAylward** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
