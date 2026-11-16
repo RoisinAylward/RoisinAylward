@@ -47,13 +47,12 @@
   * **DAST:** Validated ZAP findings by hand in the browser: a stack trace leak from `/api/`, a wildcard CORS policy and a session ID exposed in `socket.io` URLs.
   * **Documentation:** Includes the full [Technical Report (PDF)](https://github.com/RoisinAylward/JuiceShopSecurityAssessment/blob/main/documentation/Report_32.pdf) and my [ZAP Scan Report (PDF)](https://github.com/RoisinAylward/JuiceShopSecurityAssessment/blob/main/dast/2026-05-05-ZAP-Report-localhost.pdf) viewable natively in-repo, plus the full Semgrep output.
 
-* [Threat Hunter Toolkit (COMP H2705)](https://github.com/RoisinAylward/ThreatHunterToolkit) - An Automated SOC Investigation Framework engineered to process high-volume security logs and automatically flag cross-platform indicators of compromise. Built for *Advanced Scripting for Cyber Security*.
-  * **Automation Stack:** Native PowerShell orchestration core (`run.ps1`) driving high-throughput pattern matching and string manipulation across log files.
-  * **Multi-Source Log Analysis:** Ingests and correlates disparate log data streams including web server entries (`access.log`), Linux/SSH authentication attempts (`auth.log`), and native host activities (`powershell_log.txt`).
-  * **Threat Intelligence Cross-Checking:** Automates malicious indicator validation by cross-referencing extracted host/network data directly against internal Threat Intel databases (`ioc.txt`).
-  * **Detection Logic Engine:** Implements threshold-based alerts targeting brute-force authentication models, anomalous obfuscation patterns (e.g., `-EncodedCommand`), and data exfiltration pipelines.
-  * **Reporting Architecture:** Outputs structured, timestamped triage records dynamically catalogued in an analytical `archive/` database.
-  * **Documentation:** Includes the full [Threat Hunter Toolkit  Report (PDF)](https://github.com/RoisinAylward/ThreatHunterToolkit/blob/main/documentation/Threat%20Hunter%20Toolkit%20Report.pdf) viewable natively in-repo.
+* [Threat Hunter Toolkit (COMP H2705)](https://github.com/RoisinAylward/ThreatHunterToolkit) - A PowerShell tool that analyses SSH, web server and PowerShell logs for signs of attack and writes an investigation report with a risk level. Built for *Advanced Scripting for Cyber Security*.
+  * **How It Runs:** One command (`run.ps1`) checks the input files exist, runs four detection scripts in turn and passes their results to a report generator.
+  * **SSH Detection:** Flags IPs with 5 or more failed logins in `auth.log`, brute-force IPs that then logged in successfully, and IPs trying 3 or more usernames.
+  * **PowerShell Detection:** Six rule-based checks on `powershell_log.txt`, including `-EncodedCommand`, execution policy bypass, reconnaissance commands and a compress-then-upload exfiltration pattern.
+  * **IOC Matching & Web Scanning:** Checks `access.log` against the known-bad IPs and paths in `ioc.txt`, and flags IPs with 20 or more 404/403 errors.
+  * **Outcome:** On the project dataset it raised 65 alerts and rated the risk CRITICAL, including two successful brute-force logins and a data exfiltration pattern.
 
 * [Secure Azure Cloud Deployment: TechStart Solutions (COMP H2703)](https://github.com/RoisinAylward/techstartsolutions) - Designed, deployed and secured the Azure infrastructure for a fictional six-person software company's web app, covering network segmentation, least-privilege access control, encryption, Linux hardening, logging and backups. Built for *Security Administration*.
   * **Cloud Stack:** Ubuntu 24.04 VM running Apache, mod_wsgi and Flask, with Azure SQL Database, Blob Storage and Key Vault, inside one VNet split into three subnets.
