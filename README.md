@@ -89,7 +89,8 @@
 * [Contact Book Application (COMP H1031)](https://github.com/RoisinAylward/contact_book) - A Python-based contact management system utilising CSV file storage. Built as the final project for *Fundamentals of Python Programming 2*.
   * **Core Architecture:** Split into `main.py` for user interface execution and `core_logic.py` for backend processing.
   * **Security & Reliability Focus:** Implemented robust input data validation and sanitisation techniques to protect against malformed data entry.
-  * **Testing Suite:** Comprehensive unit tests (`test_core_logic.py`) to automate input validity checking and ensure functional consistency.
+  * **Input Validation:** Regex and length checks on names, phone numbers and email addresses, plus duplicate checks on phone numbers and emails.
+  * **Testing:** Unit tests (`test_core_logic.py`) for the validation functions, using mocking to test the duplicate checks without a real file.
 
 
 <!--
